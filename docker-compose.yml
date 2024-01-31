@@ -1,0 +1,9 @@
+services:
+  dev:
+    build: .devcontainer
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/code
+      - ${INPUT_PATH}:/input:ro
+    working_dir: /code
